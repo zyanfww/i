@@ -163,3 +163,8 @@ class Identity(InteractiveScene):
         )
         self.add(fin)
         self.wait()
+
+        self.play(
+            Uncreate(fin_rects)
+        )
+        self.wait()
