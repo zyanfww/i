@@ -165,6 +165,8 @@ class Identity(InteractiveScene):
         self.wait()
 
         self.play(
-            Uncreate(fin_rects)
+            LaggedStart(
+                *(Uncreate(fin_r) for fin_r in fin_rects)
+            )
         )
         self.wait()
