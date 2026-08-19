@@ -177,7 +177,7 @@ class Identity(InteractiveScene):
         inv_idt.set_color(color)
         inv_idt.arrange(DOWN, buff=MED_LARGE_BUFF * 1.1)
 
-        inv_rect = SurroundingRectangle(inv_idt, stroke_color=color, stroke_width=3, buff=MED_LARGE_BUFF * 0.35)
+        inv_rect = SurroundingRectangle(inv_idt, stroke_color=color, stroke_width=3, buff=MED_LARGE_BUFF * 0.35).round_corners(0.05)
 
         self.play(
             LaggedStart(
