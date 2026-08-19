@@ -179,7 +179,7 @@ class Identity(InteractiveScene):
         inv_rect = SurroundingRectangle(inv_idt, stroke_color=color, stroke_width=3, buff=MED_LARGE_BUFF * 0.35)
 
         self.play(
-            FadeOut(VGroup(fin, frac_igp_rect)),
+            FadeOut(VGroup(frac_igp, frac_igp_rect)),
             Write(inv_idt[0]),
             FadeIn(inv_idt[1]),
             ShowCreation(inv_rect)
