@@ -1,0 +1,39 @@
+from manimlib import *
+
+class WhatDidYouSee(InteractiveScene):
+    def construct(self):
+        color = [PURPLE_A, PURPLE_C]
+        what = TexText("Nothing wrong here,", font_size=40)
+        what.shift(UP * 3)
+
+        see = TexText("What did you see?", font_size=38)
+        see.set_color([YELLOW, ORANGE])
+        see.next_to(what, DOWN, buff=MED_LARGE_BUFF)
+
+        equ = Tex(
+            R"\int x\, dx = \frac{x^2}{2}",
+            font_size=40
+        ).set_color(color)
+
+        equ_c = Tex(
+            R"\int x\, dx = \frac{x^2}{2} - C",
+            font_size=40
+        ).match_color(equ)
+
+        minus_c = equ_c["- C"][0]
+        main_part = equ_c[:-2]
+
+        self.play(
+            Write(equ),
+            FadeIn(what, UP * 0.5)
+        )
+        self.wait(1)
+
+        self.play(
+            Transform(equ, main_part),
+            FadeIn(minus_c),
+            FadeIn(see),
+            run_time=1.5
+        )
+
+        self.wait(3)
