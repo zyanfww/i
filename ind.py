@@ -125,7 +125,7 @@ class Identity(InteractiveScene):
             ShowCreation(frac_igp_rect)
         )
         self.wait()
-        frac_igp_rect.shift(0.0000001*RIGHT)
+        # frac_igp_rect.shift(0.0000001*RIGHT)
         self.play(
             LaggedStart(
              *(ShowCreation(rect) for rect in frac_rects),
@@ -159,7 +159,8 @@ class Identity(InteractiveScene):
             Transform(frac_equ[7], fin[-1], remover=True),
             Transform(frac_equ[10], fin[-1], remover=True),
             ReplacementTransform(frac_rects[0], fin_rects[0]),
-            ReplacementTransform(frac_rects[1], fin_rects[1])
+            ReplacementTransform(frac_rects[1], fin_rects[1]),
+            Transform(frac_equ["="], fin["="], remover=True)
         )
         self.add(fin)
         self.wait()
