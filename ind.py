@@ -148,10 +148,10 @@ class Identity(InteractiveScene):
             Transform(frac_equ[3], fin[3], remover=True),
             Transform(frac_equ[1], fin[5], remover=True),
             Transform(frac_equ[4], fin[5], remover=True),
-            Write(fin[0], remover=True),
-            Write(fin[4], remover=True),
-            Write(fin[7], remover=True),
-            Write(fin[-2], remover=True),
+            FadeIn(fin[0], remover=True),
+            FadeIn(fin[4], remover=True),
+            FadeIn(fin[7], remover=True),
+            FadeIn(fin[-2], remover=True),
             Transform(frac_equ[6], fin[8], remover=True),
             Transform(frac_equ[9], fin[10], remover=True),
             Transform(frac_equ[8], fin[9], remover=True),
@@ -168,5 +168,19 @@ class Identity(InteractiveScene):
             LaggedStart(
                 *(Uncreate(fin_r) for fin_r in fin_rects)
             )
+        )
+        inv_idt = VGroup(
+            TexText("Remember!"),
+            Tex(R"\frac{a^n}{b^n} = \left( \frac{b}{a} \right)^{-n}")
+        )
+        inv_idt.set_color(color)
+        inv_idt.arrange(DOWN, buff=MED_LARGE_BUFF * 1.1)
+
+        inv_rect = SurroundingRectangle(inv_idt, stroke_color=color, stroke_width=3, buff=MED_LARGE_BUFF * 0.35)
+
+        self.play(
+            Write(inv_idt[0]),
+            FadeIn(inv_idt[1]),
+            ShowCreation(inv_rect)
         )
         self.wait()
