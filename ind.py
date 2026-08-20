@@ -197,11 +197,11 @@ class Identity(InteractiveScene):
         self.play(
             Transform(fin[:8], inv_equ[:8], remover=True),
             Transform(fin[8], inv_equ[10], path_arc=120*DEG, remover=True),
-            TransformFromCo(fin[10], inv_equ[8], path_arc=120*DEG, remover=True),
-            TransformFromCopy(fin[9], inv_equ[9], remover=True),
-            TransformFromCopy(fin[11], inv_equ[11], remover=True),
+            Transform(fin[10], inv_equ[8], path_arc=120*DEG, remover=True),
+            Transform(fin[9], inv_equ[9], remover=True),
+            Transform(fin[11], inv_equ[11], remover=True),
             GrowFromEdge(inv_equ[-2], RIGHT, remover=True),
-            TransformFromCopy(fin[-1], inv_equ[-1], remover=True)
+            Transform(fin[-1], inv_equ[-1], remover=True)
         )
         self.add(inv_equ)
         self.wait(0.5)
@@ -214,10 +214,10 @@ class Identity(InteractiveScene):
         final.next_to(inv_equ, DOWN, buff=MED_LARGE_BUFF)
         final.set_color(color)
         self.play(
-            Transform(inv_equ["x"][0], final["x"][0]),
-            Transform(inv_equ["="], final["="]),
-            Transform(inv_equ[-2], final[-2]),
-            Transform(inv_equ[-1], final[-1])
+            TransformFromCopy(inv_equ["x"][0], final["x"][0]),
+            TransformFromCopy(inv_equ["="], final["="]),
+            TransformFromCopy(inv_equ[-2], final[-2]),
+            TransformFromCopy(inv_equ[-1], final[-1])
         )
         self.play(FlashAround(final, time_width=1, color=color, stroke_width=3, round_corners=0.05), run_time=2)
         self.wait(2)
