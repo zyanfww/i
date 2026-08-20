@@ -65,7 +65,8 @@ class Roman(InteractiveScene):
         xx.set_color(GOLD)
 
         self.play(
-            ReplacementTransform(roman, xx)
+            ReplacementTransform(roman["X"][0], xx[0]),
+            ReplacementTransform(roman["X"][1], xx[1]),
         )
         self.play(
             ReplacementTransform(xx, math["20"])
