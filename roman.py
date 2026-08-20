@@ -45,4 +45,7 @@ class Roman(InteractiveScene):
             Uncreate(one_and_i_rect[1]),
             roman["I"][1].animate.set_color(GOLD)
         )
+        self.play(
+            TransformFromCopy(math["-"], roman["-"])
+        )
         self.wait()
