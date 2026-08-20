@@ -40,11 +40,11 @@ class Roman(InteractiveScene):
         )
         self.play(
             ReplacementTransform(one_and_i_rect[0], one_and_i_rect[1]),
-            roman[-1].animate.set_color(color)
+            roman[-1].animate.set_color([PURPLE_A])
         )
         self.play(
             Uncreate(one_and_i_rect[1]),
-            roman["I"][1].animate.set_color(GOLD)
+            roman[-1].animate.set_color(GOLD)
         )
         self.play(
             TransformFromCopy(math["-"], roman["-"])
