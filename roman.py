@@ -68,6 +68,10 @@ class Roman(InteractiveScene):
             ReplacementTransform(roman[2], xx[1]),
         )
         self.play(
-            ReplacementTransform(xx, math["20"])
+            Transform(xx, math["20"])
         )
+        self.remove(math)
+        self.add(math)
+        self.play(math.animate.center())
+        self.play(FlashAround(math, time_width=2, stroke_width=2, color=color, round_corners=0.05), run_time=2)
         self.wait(2)
