@@ -23,7 +23,7 @@ class Roman(InteractiveScene):
         )
         self.play(
             ReplacementTransform(sur_math1, sur_roman1),
-            roman[:3].animate.set_color(color).set_anim_args(rate_func=there_and_back)
+            roman[:3].animate.set_color(color).set_anim_args(rate_func=there_and_back, run_time=2)
         )
         self.play(
             Uncreate(sur_roman1)
