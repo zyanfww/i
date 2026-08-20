@@ -22,9 +22,28 @@ class Roman(InteractiveScene):
         )
         self.play(
             ReplacementTransform(sur_math1, sur_roman1),
-            roman[:3].animate.set_color(color).set_anim_args(rate_func=there_and_back, run_time=2)
+            roman[:3].animate.set_color(color).set_anim_args(run_time=2)
         )
         self.play(
-            Uncreate(sur_roman1)
+            Uncreate(sur_roman1),
+            roman[:3].animate.set_color(GOLD).set_anim_args(run_time=2)
+        )
+        self.wait()
+
+        one_and_i_rect = VGroup(
+            SurroundingRectangle(math["1"], stroke_color=color, stroke_width=3).round_corners(0.05),
+            SurroundingRectangle(roman["I"][1], stroke_color=color, stroke_width=3).round_corners(0.05),
+        )
+
+        self.play(
+            ShowCreation(one_and_i_rect[0]),
+        )
+        self.play(
+            ReplacementTransform(one_and_i_rect[0], one_and_i_rect[1]),
+            roman["I"][1].animate.set_color(color).set_anim_args(run_time=2)
+        )
+        self.play(
+            Uncreate(one_and_i_rect[1]),
+            roman["I"][1].animate.set_color(GOLD).set_anim_args(run_time=2)
         )
         self.wait()
