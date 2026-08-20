@@ -8,7 +8,6 @@ class Roman(InteractiveScene):
         math.shift(2 * UP)
 
         self.play(Write(math[:5]))
-        self.wait()
 
         roman = Tex("XIX - I")
         roman.set_color(GOLD)
