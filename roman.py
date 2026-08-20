@@ -34,6 +34,7 @@ class Roman(InteractiveScene):
             SurroundingRectangle(roman["I"][1], stroke_color=color, stroke_width=3).round_corners(0.05),
         )
 
+        self.play(FadeIn(roman[-1], UP * 0.5))
         self.play(
             ShowCreation(one_and_i_rect[0]),
         )
