@@ -11,7 +11,7 @@ class Roman(InteractiveScene):
 
         roman = Tex("XIX - I")
         roman.set_color(GOLD)
-        roman.next_to(math, DOWN, LARGE_BUFF * 1.5)
+        roman.next_to(math, DOWN, LARGE_BUFF * 1.5, aligned_edge=LEFT)
 
         sur_math1 = SurroundingRectangle(math[:2], stroke_color=color, stroke_width=3).round_corners(0.05)
         sur_roman1 = SurroundingRectangle(roman[:3], stroke_color=color, stroke_width=3).round_corners(0.05)
@@ -47,5 +47,10 @@ class Roman(InteractiveScene):
         )
         self.play(
             TransformFromCopy(math["-"], roman["-"])
+        )
+        self.wait(0.5)
+        self.play(
+            roman["-"].animate.move_to(roman["I"][0]),
+            roman["I"][1].animate.move_to(roman["I"][0])
         )
         self.wait()
