@@ -189,4 +189,17 @@ class Identity(InteractiveScene):
             )
         )
         self.wait()
- 
+
+        inv_equ = Tex(R"\left( \frac{6}{5} \right)^x = \left( \frac{6}{5} \right)^{-5}", isolate=["6", "5", "-5"])
+        inv_equ.shift(2.0 * UP)
+        inv_equ.set_color(color)
+
+        self.play(
+            Transform(fin[:8], inv_equ[:8]),
+            Transform(fin[8], inv_equ[8]),
+            Transform(fin[10], inv_equ[10]),
+            Transform(fin[11], inv_equ[11]),
+            GrowFromEdge(inv_equ[-2], RIGHT),
+            Transform(fin[-1], inv_equ[-1])
+        )
+        self.wait()
