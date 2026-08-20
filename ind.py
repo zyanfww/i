@@ -185,7 +185,8 @@ class Identity(InteractiveScene):
                 Write(inv_idt[0]),
                 FadeIn(inv_idt[1]),
                 ShowCreation(inv_rect),
-                lag_ratio=0.25
+                lag_ratio=0.5
             )
         )
         self.wait()
+ 
