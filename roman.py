@@ -68,7 +68,7 @@ class Roman(InteractiveScene):
             ReplacementTransform(roman[2], xx[1]),
         )
         self.play(
-            Transform(xx, math["20"])
+            Transform(xx, math["20"], remover=True)
         )
         self.remove(math)
         self.add(math)
