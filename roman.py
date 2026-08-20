@@ -59,3 +59,15 @@ class Roman(InteractiveScene):
             FadeOut(roman["I"])
         )
         self.wait()
+
+        xx = Tex("XX")
+        xx.move_to(roman["XIX"])
+        xx.set_color(GOLD)
+
+        self.play(
+            ReplacementTransform(roman, xx)
+        )
+        self.play(
+            ReplacementTransform(xx, math["20"])
+        )
+        self.wait()
