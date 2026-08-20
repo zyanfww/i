@@ -196,8 +196,9 @@ class Identity(InteractiveScene):
 
         self.play(
             Transform(fin[:8], inv_equ[:8]),
-            Transform(fin[8], inv_equ[8]),
-            Transform(fin[10], inv_equ[10]),
+            Transform(fin[8], inv_equ[10], path_arc=90*DEG),
+            Transform(fin[10], inv_equ[8], path_arc=-90*DEG),
+            Transform(fin[9], inv_equ[9]),
             Transform(fin[11], inv_equ[11]),
             GrowFromEdge(inv_equ[-2], RIGHT),
             Transform(fin[-1], inv_equ[-1])
