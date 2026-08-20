@@ -261,10 +261,11 @@ class FlashAround(VShowPassingFlash):
         stroke_width: float = 4.0,
         color: ManimColor = YELLOW,
         buff: float = SMALL_BUFF,
+        round_corners: float | None = None,
         n_inserted_curves: int = 100,
         **kwargs
     ):
-        path = self.get_path(mobject, buff)
+        path = self.get_path(mobject, buff, round_corners)
         if mobject.is_fixed_in_frame():
             path.fix_in_frame()
         path.insert_n_curves(n_inserted_curves)
@@ -272,8 +273,11 @@ class FlashAround(VShowPassingFlash):
         path.set_stroke(color, stroke_width)
         super().__init__(path, time_width=time_width, taper_width=taper_width, **kwargs)
 
-    def get_path(self, mobject: Mobject, buff: float) -> SurroundingRectangle:
-        return SurroundingRectangle(mobject, buff=buff)
+    def get_path(self, mobject: Mobject, buff: float, round_corners: float | None) -> SurroundingRectangle:
+        if round_corners is not None:
+            return SurroundingRectangle(mobject, buff=buff).round_corners(round_corners)
+        else:
+            return SurroundingRectangle(mobject, buff=buff)
 
 
 class FlashUnder(FlashAround):

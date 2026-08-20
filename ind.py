@@ -195,13 +195,13 @@ class Identity(InteractiveScene):
         inv_equ.set_color(color)
 
         self.play(
-            Transform(fin[:8], inv_equ[:8], remover=True),
-            Transform(fin[8], inv_equ[10], path_arc=120*DEG, remover=True),
-            Transform(fin[10], inv_equ[8], path_arc=120*DEG, remover=True),
-            Transform(fin[9], inv_equ[9], remover=True),
-            Transform(fin[11], inv_equ[11], remover=True),
+            TransformFromCopy(fin[:8], inv_equ[:8], remover=True),
+            TransformFromCopy(fin[8], inv_equ[10], path_arc=120*DEG, remover=True),
+            TransformFromCopy(fin[10], inv_equ[8], path_arc=120*DEG, remover=True),
+            TransformFromCopy(fin[9], inv_equ[9], remover=True),
+            TransformFromCopy(fin[11], inv_equ[11], remover=True),
             GrowFromEdge(inv_equ[-2], RIGHT, remover=True),
-            Transform(fin[-1], inv_equ[-1], remover=True)
+            TransformFromCopy(fin[-1], inv_equ[-1], remover=True)
         )
         self.add(inv_equ)
         self.wait(0.5)
@@ -219,4 +219,5 @@ class Identity(InteractiveScene):
             Transform(inv_equ[-2], final[-2]),
             Transform(inv_equ[-1], final[-1])
         )
+        self.play(FlashAround(final, time_width=2, color=color, stroke_width=3, round_corners=0.05))
         self.wait(2)
