@@ -54,7 +54,6 @@ class Roman(InteractiveScene):
             roman["-"].animate.move_to(roman["I"][0]),
             roman["I"][1].animate.move_to(roman["I"][0])
         )
-        self.wait(0.3)
         self.play(
             FadeOut(roman["-"]),
             FadeOut(roman["I"])
