@@ -56,6 +56,6 @@ class Roman(InteractiveScene):
         self.wait()
         self.play(
             FadeOut(roman["-"]),
-            FadeOut(roman["I"][0])
+            FadeOut(roman["I"])
         )
         self.wait()
