@@ -49,7 +49,7 @@ class Roman(InteractiveScene):
         self.play(
             TransformFromCopy(math["-"], roman["-"])
         )
-        self.wait(0.5)
+
         self.play(
             roman["-"].animate.move_to(roman["I"][0]),
             roman["I"][1].animate.move_to(roman["I"][0])
@@ -59,7 +59,6 @@ class Roman(InteractiveScene):
             FadeOut(roman["-"]),
             FadeOut(roman["I"])
         )
-        self.wait(0.3)
 
         xx = Tex("XX")
         xx.move_to(roman["XIX"])
