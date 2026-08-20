@@ -195,12 +195,26 @@ class Identity(InteractiveScene):
         inv_equ.set_color(color)
 
         self.play(
-            Transform(fin[:8], inv_equ[:8]),
-            Transform(fin[8], inv_equ[10], path_arc=90*DEG),
-            Transform(fin[10], inv_equ[8], path_arc=90*DEG),
-            Transform(fin[9], inv_equ[9]),
-            Transform(fin[11], inv_equ[11]),
-            GrowFromEdge(inv_equ[-2], RIGHT),
-            Transform(fin[-1], inv_equ[-1])
+            Transform(fin[:8], inv_equ[:8], remover=True),
+            Transform(fin[8], inv_equ[10], path_arc=120*DEG, remover=True),
+            Transform(fin[10], inv_equ[8], path_arc=120*DEG, remover=True),
+            Transform(fin[9], inv_equ[9], remover=True),
+            Transform(fin[11], inv_equ[11], remover=True),
+            GrowFromEdge(inv_equ[-2], RIGHT, remover=True),
+            Transform(fin[-1], inv_equ[-1], remover=True)
+        )
+        self.add(inv_equ)
+        self.play(
+            FadeOut(inv_idt, DOWN * 0.5),
+            Uncreate(inv_rect)
+        )
+
+        final = Tex("x = -5")
+        final.next_to(inv_equ, DOWN, buff=MED_LARGE_BUFF)
+        final.set_color(color)
+        self.play(
+            Transform(inv_equ["x"][0], final["x"][0]),
+            Transform(inv_equ[-2], final[-2]),
+            Transform(inv_equ[-1], final[-1])
         )
         self.wait()
