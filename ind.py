@@ -204,6 +204,7 @@ class Identity(InteractiveScene):
             Transform(fin[-1], inv_equ[-1], remover=True)
         )
         self.add(inv_equ)
+        self.wait(0.5)
         self.play(
             FadeOut(inv_idt, DOWN * 0.5),
             Uncreate(inv_rect)
@@ -214,7 +215,8 @@ class Identity(InteractiveScene):
         final.set_color(color)
         self.play(
             Transform(inv_equ["x"][0], final["x"][0]),
+            Transform(inv_equ["="], final["="]),
             Transform(inv_equ[-2], final[-2]),
             Transform(inv_equ[-1], final[-1])
         )
-        self.wait()
+        self.wait(2)
