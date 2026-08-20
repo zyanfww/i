@@ -219,5 +219,5 @@ class Identity(InteractiveScene):
             TransformFromCopy(inv_equ[-2], final[-2]),
             TransformFromCopy(inv_equ[-1], final[-1])
         )
-        self.play(FlashAround(final, time_width=1, color=color, stroke_width=3, round_corners=0.05), run_time=2)
+        self.play(FlashAround(final, time_width=2, color=color, stroke_width=3, round_corners=0.05), run_time=2)
         self.wait(2)
