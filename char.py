@@ -12,6 +12,7 @@ class YourInitial(InteractiveScene):
         tt = VGroup(title, title2)
         tt.set_color(color)
         tt.scale(1.0)
+        tt.center()
         self.add(tt)
 
 class AB(InteractiveScene):
