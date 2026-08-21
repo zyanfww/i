@@ -1,5 +1,18 @@
 from manimlib import *
 
+class YourInitial(InteractiveScene):
+    def construct(self):
+        color = [PURPLE_A, PURPLE_C]
+        title = TexText(R"$\mathbb{Y}our $\mathbb{I}$nitial$", font_size=67)
+        title2 = TexText(R"$\mathbb{Y}our $\mathbb{M}$ath $\mathbb{P}$roblem", font_size=67)
+
+        title.shift(0.5 * UP)
+        title2.next_to(title, DOWN, buff=LARGE_BUFF)
+
+        tt = VGroup(title, title2)
+        tt.set_color(color)
+        tt.scale(1.2)
+        self.add(tt)
 
 class AB(InteractiveScene):
     def construct(self):
