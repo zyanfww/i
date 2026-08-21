@@ -59,7 +59,7 @@ class February(InteractiveScene):
         self.add(problem)
 
         solve = TexText("Find all possible values of $x$")
-        solve.set_width(FRAME_WIDTH - 5)
+        solve.set_width(FRAME_WIDTH - 3)
         solve.set_color(color)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.25)
         self.add(solve)
@@ -84,11 +84,11 @@ class March(InteractiveScene):
             R"\lim_{x\to0}\frac{\sin(5x)}{x}"
         )
         problem.set_color(color)
-        problem.set_width(FRAME_WIDTH - 3)
+        problem.set_width(FRAME_WIDTH - 5)
         self.add(problem)
 
         solve = TexText("Evaluate")
-        solve.set_width(FRAME_WIDTH - 5)
+        solve.set_width(FRAME_WIDTH - 3)
         solve.set_color(color)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.25)
         self.add(solve)
@@ -121,7 +121,7 @@ class April(InteractiveScene):
         self.add(problem)
 
         solve = TexText("Find the eigenvalues")
-        solve.set_width(FRAME_WIDTH - 5)
+        solve.set_width(FRAME_WIDTH - 3)
         solve.set_color(color)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.25)
         self.add(solve)
@@ -211,7 +211,7 @@ class July(InteractiveScene):
         solve = TexText(
             "Find $n$ if the sum is $385$"
         )
-        solve.set_width(FRAME_WIDTH - 5)
+        solve.set_width(FRAME_WIDTH - 3)
         solve.set_color(color)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.25)
         self.add(solve)
@@ -336,7 +336,7 @@ class November(InteractiveScene):
         solve = TexText(
             "Find all critical points of $f$"
         )
-        solve.set_width(FRAME_WIDTH - 5)
+        solve.set_width(FRAME_WIDTH - 3)
         solve.set_color(color)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.25)
         self.add(solve)
