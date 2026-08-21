@@ -13,3 +13,15 @@ class YourProbelm(InteractiveScene):
         pm.set_color(color)
         pm.scale(1.1)
         self.add(pm)
+
+class January(InteractiveScene):
+    def construct(self):
+        color = [PURPLE_A, PURPLE_C]
+        title = TexText(R"$\mathbb{J}$anuary", font_size=50)
+        under = Underline(title)
+        under.insert_n_curves(10)
+        under.set_stroke(width=[0.5, 1.5, 1.5, 0.5], color=color)
+
+        titles = VGroup(under, title)
+        titles.to_edge(UP)
+        self.add(titles)
