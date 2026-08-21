@@ -31,3 +31,9 @@ class January(InteractiveScene):
         problem.set_color(color)
         problem.set_width(FRAME_WIDTH - 3)
         self.add(problem)
+
+        solve = TexText("Solve for $x$")
+        solve.set_width(FRAME_WIDTH - 4)
+        solve.set_color(color)
+        solve.to_edge(DOWN, buff=MED_LARGE_BUFF * 0.67)
+        self.add(solve)
