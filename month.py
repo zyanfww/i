@@ -26,3 +26,8 @@ class January(InteractiveScene):
         titles = VGroup(under, title)
         titles.to_edge(UP)
         self.add(titles)
+
+        problem = Tex(R"-6 + 3x = 6 - 3x")
+        problem.set_color(color)
+        problem.set_width(FRAME_WIDTH - 3)
+        self.add(problem)
