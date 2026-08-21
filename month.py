@@ -33,7 +33,7 @@ class January(InteractiveScene):
         self.add(problem)
 
         solve = TexText("Solve for $x$")
-        solve.set_width(FRAME_WIDTH - 4)
+        solve.set_width(FRAME_WIDTH - 5)
         solve.set_color(color)
-        solve.next_to(problem, DOWN, buff=MED_LARGE_BUFF * 0.67)
+        solve.next_to(problem, DOWN, buff=MED_LARGE_BUFF)
         self.add(solve)
