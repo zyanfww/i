@@ -7,8 +7,9 @@ class YourProbelm(InteractiveScene):
         math = TexText(R"$\mathbb{Y}$our $\mathbb{M}$ath $\mathbb{P}$roblem")
 
         problem.shift(UP * 0.5)
-        math.next_to(problem, DOWN, buff=MED_LARGE_BUFF)
-        problem.set_color(color)
-        math.set_color(color)
+        math.next_to(problem, DOWN, buff=LARGE_BUFF)
 
-        self.add(problem, math)
+        pm = VGroup(problem, math)
+        pm.set_color(color)
+        pm.scale(1.1)
+        self.add(pm)
