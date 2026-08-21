@@ -1,3 +1,3 @@
-#xvfb-run -a manimgl roman.py -w -r 2160x3840 --fps 60
-ffmpeg -i ./videos/Roman.mp4 -c copy -movflags +faststart -bsf:a aac_adtstoasc patch_identity.mp4
+xvfb-run -a manimgl month.py -sw -r 1080x1080
+# ffmpeg -i ./videos/Roman.mp4 -c copy -movflags +faststart -bsf:a aac_adtstoasc patch_identity.mp4
 ./g
