@@ -3,8 +3,8 @@ from manimlib import *
 class YourInitial(InteractiveScene):
     def construct(self):
         color = [PURPLE_A, PURPLE_C]
-        title = TexText(R"$\mathbb{Y}our $\mathbb{I}$nitial$", font_size=67)
-        title2 = TexText(R"$\mathbb{Y}our $\mathbb{M}$ath $\mathbb{P}$roblem", font_size=67)
+        title = TexText(R"$\mathbb{Y}$our $\mathbb{I}$nitial$", font_size=67)
+        title2 = TexText(R"$\mathbb{Y}$our $\mathbb{M}$ath $\mathbb{P}$roblem", font_size=67)
 
         title.shift(0.5 * UP)
         title2.next_to(title, DOWN, buff=LARGE_BUFF)
