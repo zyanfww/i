@@ -28,7 +28,6 @@ class AB(InteractiveScene):
         B.set_color(color)
         B.set_width(FRAME_WIDTH - 7)
 
-        A.next_to(titles, DOWN, buff=LARGE_BUFF)
         B.next_to(A, DOWN, buff=LARGE_BUFF)
 
         self.add(A, B)
