@@ -19,24 +19,14 @@ class AB(InteractiveScene):
     def construct(self):
         color = [PURPLE_A, PURPLE_C]
 
-        title = TexText(R"$\mathbb{A}$ - $\mathbb{B}$", font_size=67)
-        title.set_color(color)
-
-        under = Underline(title)
-        under.insert_n_curves(10)
-        under.set_stroke(width=[1, 2, 2, 1], color=color)
-
-        titles = VGroup(under, title)
-        titles.to_edge(UP)
-        self.add(titles)
-
-        A = Tex(R"\int_0^1 x\ln x\,dx")
+        A = Tex(R" \text{A} - \int_0^1 x\ln x\,dx")
         A.set_color(color)
-        A.set_width(FRAME_WIDTH - 4)
+        A.set_width(FRAME_WIDTH - 5)
+        A.shift(UP)
 
-        B = Tex(R"\sum_{n=1}^{\infty}\frac{1}{n^2}")
+        B = Tex(R"\text{B} - \sum_{n=1}^{\infty}\frac{1}{n^2}")
         B.set_color(color)
-        B.set_width(FRAME_WIDTH - 4)
+        B.set_width(FRAME_WIDTH - 7)
 
         A.next_to(titles, DOWN, buff=LARGE_BUFF)
         B.next_to(A, DOWN, buff=LARGE_BUFF)
