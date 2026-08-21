@@ -21,12 +21,12 @@ class AB(InteractiveScene):
 
         A = Tex(R" \text{A} - \int_0^1 x\ln x\,dx")
         A.set_color(color)
-        A.set_width(FRAME_WIDTH - 5)
-        A.shift(UP)
+        A.set_width(FRAME_WIDTH - 3)
+        A.shift(UP * 2)
 
         B = Tex(R"\text{B} - \sum_{n=1}^{\infty}\frac{1}{n^2}")
         B.set_color(color)
-        B.set_width(FRAME_WIDTH - 7)
+        B.set_width(FRAME_WIDTH - 4)
 
         B.next_to(A, DOWN, buff=LARGE_BUFF)
 
@@ -34,13 +34,13 @@ class AB(InteractiveScene):
 
         a = TexText("Evaluate")
         a.set_color(color)
-        a.set_width(3.2)
+        a.set_width(FRAME_WIDTH - 4)
         a.next_to(A, DOWN, buff=MED_LARGE_BUFF)
 
         b = TexText("Evaluate")
         b.set_color(color)
-        b.set_width(3.2)
-        b.next_to(B, DOWN, buff=MED_LARGE_BUFF)
+        b.set_width(FRAME_WIDTH - 4)
+        b.next_to(a, DOWN, buff=MED_LARGE_BUFF)
 
         self.add(a, b)
 
