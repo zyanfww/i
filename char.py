@@ -34,13 +34,15 @@ class AB(InteractiveScene):
 
         a = TexText("Evaluate")
         a.set_color(color)
-        a.set_width(FRAME_WIDTH - 4)
+        a.set_width(FRAME_WIDTH - 7)
         a.next_to(A, DOWN, buff=MED_LARGE_BUFF)
 
         b = TexText("Evaluate")
         b.set_color(color)
         b.set_width(FRAME_WIDTH - 4)
         b.next_to(a, DOWN, buff=MED_LARGE_BUFF)
+
+        self.add(a)
 
 
 class CD(InteractiveScene):
