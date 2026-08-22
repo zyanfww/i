@@ -61,7 +61,7 @@ class B(InteractiveScene):
         problem = Tex(R"\sum_{n=1}^{\infty}\frac{1}{n^2}")
         problem.set_color(color)
         problem.shift(UP)
-        problem.set_width(FRAME_WIDTH - 4)
+        problem.set_width(FRAME_WIDTH - 6)
         self.add(problem)
 
         solve = TexText("Evaluate")
