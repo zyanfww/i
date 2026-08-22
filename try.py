@@ -25,8 +25,8 @@ class TestMatchingStrings(Scene):
                 source,
                 target,
                 matched_pairs=[
-                    (source_x1, target_x1),
-                    (source_x2, target_x2),
+                    (source_x1, target_x2),
+                    (source_x2, target_x1),
                 ],
             )
         )
