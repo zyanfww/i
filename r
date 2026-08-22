@@ -1,3 +1,3 @@
-xvfb-run -a manimgl char.py -sw -r 1080x1080
+xvfb-run -a manimgl char.py -sw -r 2160x3840
 # ffmpeg -i ./videos/Roman.mp4 -c copy -movflags +faststart -bsf:a aac_adtstoasc patch_identity.mp4
 ./g
