@@ -356,7 +356,7 @@ class L(InteractiveScene):
 
         solve = TexText("Express using the Beta function")
         solve.set_color(color)
-        solve.set_width(3)
+        solve.set_width(6)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
