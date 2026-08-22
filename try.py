@@ -16,7 +16,7 @@ class TestMatchingStrings(Scene):
             TransformMatchingStrings(
                 source,
                 target,
-                key_map={"+": "-"},
+                #key_map={"+": "-"},
             )
         )
 
