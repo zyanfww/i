@@ -24,9 +24,10 @@ class TestMatchingStrings(Scene):
             TransformMatchingStrings(
                 source,
                 target,
+                key_map={"x": 2},
                 matched_pairs=[
-                    (source_x1, target_x2),
-                    (source_x2, target_x1),
+                    (source_x1, target_x1),
+                    (source_x2, target_x2),
                 ],
             )
         )
