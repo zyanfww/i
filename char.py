@@ -321,7 +321,7 @@ class K(InteractiveScene):
         problem = Tex(R"\Gamma\left(\frac12\right)")
         problem.set_color(color)
         problem.shift(UP)
-        problem.set_width(FRAME_WIDTH - 3)
+        problem.set_width(FRAME_WIDTH - 6)
 
         self.add(problem)
 
