@@ -117,13 +117,15 @@ class D(InteractiveScene):
 
         problem = Tex(R"\lim_{x\to0}\frac{\sin x-x+\frac{x^3}{6}}{x^5}")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
+
         self.add(problem)
 
         solve = TexText("Evaluate the limit")
         solve.set_color(color)
-        solve.set_width(4.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.set_width(FRAME_WIDTH - 4)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
