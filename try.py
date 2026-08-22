@@ -3,8 +3,8 @@ from manimlib import *
 
 class TestMatchingStrings(Scene):
     def construct(self):
-        source = Tex("x + y = 2")        
-        target = Tex("x = 2 - y")
+        source = Tex("x + y + z")        
+        target = Tex("x - y - z")
 
         #source.to_edge(LEFT)
         #target.to_edge(RIGHT)
@@ -16,7 +16,7 @@ class TestMatchingStrings(Scene):
             TransformMatchingStrings(
                 source,
                 target,
-                #key_map={"+": "-"},
+                key_map={"+": "-"},
             )
         )
 
