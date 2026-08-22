@@ -349,13 +349,15 @@ class L(InteractiveScene):
 
         problem = Tex(R"\int_0^1x^{a-1}(1-x)^{b-1}\,dx")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
+
         self.add(problem)
 
         solve = TexText("Express using the Beta function")
         solve.set_color(color)
-        solve.set_width(5.0)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.set_width(2.2)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
