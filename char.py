@@ -500,7 +500,7 @@ class Q(InteractiveScene):
         problem = Tex(R"\zeta(2)")
         problem.set_color(color)
         problem.shift(UP)
-        problem.set_width(FRAME_WIDTH - 5)
+        problem.set_width(FRAME_WIDTH - 7)
         self.add(problem)
 
         solve = TexText("Evaluate")
