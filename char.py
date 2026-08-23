@@ -729,7 +729,7 @@ class Y(InteractiveScene):
 
         solve = TexText("Express in terms of Gamma and Zeta")
         solve.set_color(color)
-        solve.set_width(5.2)
+        solve.set_width(6.2)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
