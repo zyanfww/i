@@ -668,7 +668,7 @@ class W(InteractiveScene):
         problem = Tex(R"\sum_{n=1}^{\infty}\frac{1}{n^4}")
         problem.set_color(color)
         problem.shift(UP)
-        problem.set_width(FRAME_WIDTH - 4.5)
+        problem.set_width(FRAME_WIDTH - 6)
         self.add(problem)
 
         solve = TexText("Evaluate the series")
