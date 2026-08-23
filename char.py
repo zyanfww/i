@@ -15,6 +15,7 @@ class YourInitial(InteractiveScene):
         tt.center()
         self.add(tt)
 
+
 class A(InteractiveScene):
     def construct(self):
         color = [PURPLE_A, PURPLE_C]
@@ -477,6 +478,10 @@ class P(InteractiveScene):
         self.add(solve)
 
 
+# ============================================================
+# Q - Z : UPDATED
+# ============================================================
+
 class Q(InteractiveScene):
     def construct(self):
         color = [PURPLE_A, PURPLE_C]
@@ -494,13 +499,14 @@ class Q(InteractiveScene):
 
         problem = Tex(R"\zeta(2)")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 5)
         self.add(problem)
 
         solve = TexText("Evaluate")
         solve.set_color(color)
-        solve.set_width(3.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.set_width(3)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -521,13 +527,14 @@ class R(InteractiveScene):
 
         problem = Tex(R"\zeta(0)")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 5)
         self.add(problem)
 
         solve = TexText("Evaluate using analytic continuation")
         solve.set_color(color)
         solve.set_width(5.0)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -548,13 +555,14 @@ class S(InteractiveScene):
 
         problem = Tex(R"\zeta(2)=\sum_{n=1}^{\infty}\frac{1}{n^2}")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 3)
         self.add(problem)
 
         solve = TexText("Evaluate the series")
         solve.set_color(color)
         solve.set_width(4.5)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -575,13 +583,14 @@ class T(InteractiveScene):
 
         problem = Tex(R"\int_0^\infty\frac{\sin x}{x}\,dx")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
         self.add(problem)
 
         solve = TexText("Evaluate")
         solve.set_color(color)
         solve.set_width(3.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -602,13 +611,14 @@ class U(InteractiveScene):
 
         problem = Tex(R"\oint_C\frac{e^z}{z^2}\,dz")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
         self.add(problem)
 
         solve = TexText("Evaluate using Cauchy's integral formula")
         solve.set_color(color)
         solve.set_width(5.1)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -629,13 +639,14 @@ class V(InteractiveScene):
 
         problem = Tex(R"\oint_C\frac{dz}{z(z-1)}")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
         self.add(problem)
 
         solve = TexText("Evaluate using residues")
         solve.set_color(color)
         solve.set_width(4.4)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -656,13 +667,14 @@ class W(InteractiveScene):
 
         problem = Tex(R"\sum_{n=1}^{\infty}\frac{1}{n^4}")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4.5)
         self.add(problem)
 
         solve = TexText("Evaluate the series")
         solve.set_color(color)
         solve.set_width(4.5)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -683,13 +695,14 @@ class X(InteractiveScene):
 
         problem = Tex(R"\int_{-\infty}^{\infty}e^{-x^2}\,dx")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 3.5)
         self.add(problem)
 
         solve = TexText("Evaluate")
         solve.set_color(color)
         solve.set_width(3.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -710,13 +723,14 @@ class Y(InteractiveScene):
 
         problem = Tex(R"\int_0^\infty\frac{x^{s-1}}{e^x-1}\,dx")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 4)
         self.add(problem)
 
         solve = TexText("Express in terms of Gamma and Zeta")
         solve.set_color(color)
         solve.set_width(5.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
 
@@ -737,11 +751,12 @@ class Z(InteractiveScene):
 
         problem = Tex(R"\zeta(s)=\sum_{n=1}^{\infty}\frac{1}{n^s}")
         problem.set_color(color)
-        problem.shift(UP * 2)
+        problem.shift(UP)
+        problem.set_width(FRAME_WIDTH - 3)
         self.add(problem)
 
         solve = TexText("Evaluate $\zeta(2)$")
         solve.set_color(color)
         solve.set_width(4.2)
-        solve.next_to(problem, DOWN, buff=LARGE_BUFF)
+        solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
