@@ -533,7 +533,7 @@ class R(InteractiveScene):
 
         solve = TexText("Evaluate using analytic continuation")
         solve.set_color(color)
-        solve.set_width(4.0)
+        solve.set_width(6.0)
         solve.next_to(problem, DOWN, buff=LARGE_BUFF * 1.5)
         self.add(solve)
 
