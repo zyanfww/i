@@ -243,10 +243,10 @@ class Dis(PaidTemplate):
         self.add(t, under)
         dis = TexText(
             R"""
-            This collection contains educational resources gathered and organized
-            for convenience. I do not claim ownership of any third-party copyrighted
-            content. All rights remain with their respective authors, publishers,
-            and copyright holders.
+            This collection contains educational \\resources gathered and organized
+            for convenience. I do not claim\\ ownership of any third-party copyrighted\\
+            content. All rights remain with\\ their respective authors, publishers,
+            and \\copyright holders.
             """, alignment="left"
         )
         dis.set_width(FRAME_WIDTH - 2)
