@@ -170,16 +170,16 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            Message in Telegram with:\\[0.25cm]
-            \textbf{MATH}\\[0.25cm]
-            \textbf{PHYSICS}\\[0.25cm]
-            \textbf{CHEMISTRY}\\[0.25cm]
-            \textbf{QUANTUM}\\[0.25cm]
-            \textbf{ASTRONOMY}\\[0.25cm]
-            \textbf{AI \& ML}\\[0.25cm]
-            \textbf{COMPUTER SCIENCE}\\[0.25cm]
-            \textbf{Quantum Computing}\\[0.25cm]
-            \textbf{Finance \& Trading}\\[0.25cm]
+            Message in Telegram with:\\[0.15cm]
+            \textbf{MATH}\\[0.15cm]
+            \textbf{PHYSICS}\\[0.15cm]
+            \textbf{CHEMISTRY}\\[0.15cm]
+            \textbf{QUANTUM}\\[0.15cm]
+            \textbf{ASTRONOMY}\\[0.15cm]
+            \textbf{AI \& ML}\\[0.15cm]
+            \textbf{COMPUTER SCIENCE}\\[0.15cm]
+            \textbf{Quantum Computing}\\[0.15cm]
+            \textbf{Finance \& Trading}\\[0.15cm]
             \textbf{FULL (Recommended)}
             """, isolate=['FULL (Recommended)'], alignment=R"\flushleft", font_size=20,
         )
