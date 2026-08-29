@@ -150,8 +150,8 @@ class Pricing(PaidTemplate):
             Quantum Mechanics & \$7.99\\
             Astronomy & \$4.99\\
             Ai \& ML & \$9.99\\
-            Computer Science & \$8.99\\[0.3cm]
-            Quantum Computing & \$9.99\\[0.3cm]
+            Computer Science & \$8.99\\
+            Quantum Computing & \$9.99\\
             Finance \& Trading & \$12.99\\[0.3cm]
             \textbf{Full Bundle (200GB+)} & \textbf{\$29.99}
             \end{tabular}
