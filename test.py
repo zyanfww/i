@@ -90,7 +90,7 @@ class Paid(PaidTemplate):
                     "Mathematics",
                     "Quantum Mechanics",
                     "Quantum Computing",
-                    font_size=20,
+                    font_size=28,
                     buff=SMALL_BUFF
                 ),
                 BulletedList(
@@ -98,7 +98,7 @@ class Paid(PaidTemplate):
                     "Astronomy",
                     R"Finance \& Trading",
                     R"Ai \& ML",
-                    font_size=20,
+                    font_size=28,
                     buff=SMALL_BUFF
                 )
             ).arrange(RIGHT, buff=LARGE_BUFF)
