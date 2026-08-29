@@ -151,6 +151,8 @@ class Pricing(PaidTemplate):
             Astronomy & \$4.99\\
             Ai \& ML & \$9.99\\
             Computer Science & \$8.99\\[0.3cm]
+            Quantum Computing & \$9.99\\[0.3cm]
+            Finance \& Trading & \$12.99\\[0.3cm]
             \textbf{Full Bundle (200GB+)} & \textbf{\$29.99}
             \end{tabular}
             """, font_size=30)
