@@ -243,7 +243,7 @@ class Dis(PaidTemplate):
         self.add(t, under)
         dis = TexText(
             R"""
-            \begin{minipage}{0.3\textwidth}
+            \begin{minipage}{0.37\textwidth}
             This collection contains educational resources gathered and organized
             for convenience. I do not claim ownership of any third-party copyrighted
             content. All rights remain with their respective authors, publishers,
@@ -251,6 +251,6 @@ class Dis(PaidTemplate):
             \end{minipage}
             """, alignment=R"\flushleft"
         )
-        dis.set_width(FRAME_WIDTH - 1)
+        dis.set_width(FRAME_WIDTH - 2)
         dis.next_to(t, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
         self.add(dis)
