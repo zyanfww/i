@@ -247,7 +247,7 @@ class Dis(PaidTemplate):
             for convenience.\\ I do not claim ownership of any third-party copyrighted\\
             content. All rights remain with\\ their respective authors, publishers,
             and \\copyright holders.
-            """, alignment="left"
+            """
         )
         dis.set_width(FRAME_WIDTH - 2)
         dis.next_to(t, DOWN, buff=MED_LARGE_BUFF, aligned_edge=LEFT)
