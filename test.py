@@ -170,7 +170,7 @@ class Payment(PaidTemplate):
 
         body = TexText(
             r"""
-            DM or Comment with:\\[0.25cm]
+            Message in Telegram with:\\[0.25cm]
             \textbf{MATH}\\[0.25cm]
             \textbf{PHYSICS}\\[0.25cm]
             \textbf{CHEMISTRY}\\[0.25cm]
@@ -178,6 +178,8 @@ class Payment(PaidTemplate):
             \textbf{ASTRONOMY}\\[0.25cm]
             \textbf{AI \& ML}\\[0.25cm]
             \textbf{COMPUTER SCIENCE}\\[0.25cm]
+            \textbf{Quantum Computing}\\[0.25cm]
+            \textbf{Finance \& Trading}\\[0.25cm]
             \textbf{FULL (Recommended)}
             """, isolate=['FULL (Recommended)'], alignment=R"\flushleft", font_size=20,
         )
