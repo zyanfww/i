@@ -153,7 +153,7 @@ class Pricing(PaidTemplate):
             Computer Science & \$8.99\\
             Quantum Computing & \$9.99\\
             Finance \& Trading & \$12.99\\[0.3cm]
-            \textbf{Full Bundle (200GB+)} & \textbf{\$29.99}
+            \textbf{Full Bundle (200GB+)} & \textbf{\$34.99}
             \end{tabular}
             """, font_size=30)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF)
