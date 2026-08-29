@@ -97,7 +97,9 @@ class Paid(PaidTemplate):
                     "Computer Science",
                     "Astronomy",
                     R"Finance \& Trading",
-                    R"Ai \& ML"
+                    R"Ai \& ML",
+                    font_size=20,
+                    buff=SMALL_BUFF
                 )
             ).arrange(RIGHT, buff=LARGE_BUFF)
         )
