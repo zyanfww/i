@@ -243,10 +243,12 @@ class Dis(PaidTemplate):
         self.add(t, under)
         dis = TexText(
             R"""
-            This collection contains educational resources \\gathered and organized
-            for convenience.\\ I do not claim ownership of any \\third-party copyrighted
-            content. All rights remain\\ with their respective authors,\\ publishers,
-            and \\copyright holders.
+            \begin{minipage}{0.41\textwidth}
+            This collection contains educational resources gathered and organized
+            for convenience. I do not claim ownership of any third-party copyrighted
+            content. All rights remain with their respective authors, publishers,
+            and copyright holders.
+            \end{minipage}
             """, alignment=R"\flushleft"
         )
         dis.set_width(FRAME_WIDTH - 2)
