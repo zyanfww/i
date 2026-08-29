@@ -83,17 +83,23 @@ class Paid(PaidTemplate):
 
         inside = VGroup(
             TexText("Inside you'll find:", font_size=26),
-            BulletedList(
-                "Mathematics",
-                "Physics",
-                "Chemistry",
-                "Quantum Mechanics",
-                "Astronomy",
-                "Computer Science",
-                R"Artificial Intelligence \& Machine Learning",
-                buff=SMALL_BUFF,
-                font_size=20
-            )
+            VGroup(
+                BulletedList(
+                    "Physics",
+                    "Chemistry",
+                    "Mathematics",
+                    "Quantum Mechanics",
+                    "Quantum Computing",
+                    font_size=20,
+                    buff=SMALL_BUFF
+                ),
+                BulletedList(
+                    "Computer Science",
+                    "Astronomy",
+                    R"Finance \& Trading",
+                    R"Ai \& ML"
+                )
+            ).arrange(RIGHT, buff=LARGE_BUFF)
         )
         inside.arrange(DOWN, buff=SMALL_BUFF, aligned_edge=LEFT)
         inside[0].shift(LEFT * 0.5)
