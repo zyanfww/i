@@ -243,7 +243,7 @@ class Dis(PaidTemplate):
         self.add(t, under)
         dis = TexText(
             R"""
-            \begin{minipage}{0.33\textwidth}
+            \begin{minipage}{0.3\textwidth}
             This collection contains educational resources gathered and organized
             for convenience. I do not claim ownership of any third-party copyrighted
             content. All rights remain with their respective authors, publishers,
