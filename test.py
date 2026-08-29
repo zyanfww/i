@@ -76,7 +76,7 @@ class Paid(PaidTemplate):
             educational resources together in one place.
             \end{minipage}
             """,
-            font_size=20,
+            font_size=24,
         )
         cont2.next_to(itm, DOWN, buff=MED_LARGE_BUFF * 0.45, aligned_edge=LEFT)
         self.add(cont2)
