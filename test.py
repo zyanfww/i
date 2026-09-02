@@ -144,16 +144,16 @@ class Pricing(PaidTemplate):
         self.add(price, under)
         pricing = TexText(r"""
             \begin{tabular}{lr}
-            Mathematics & \$8.99\\
-            Physics & \$6.99\\
-            Chemistry & \$4.99\\
+            Mathematics & \$9.99\\
+            Physics & \$7.99\\
+            Chemistry & \$2.99\\
             Quantum Mechanics & \$7.99\\
             Astronomy & \$4.99\\
-            Ai \& ML & \$9.99\\
+            Ai \& ML & \$8.99\\
             Computer Science & \$8.99\\
-            Quantum Computing & \$9.99\\
-            Finance \& Trading & \$12.99\\[0.3cm]
-            \textbf{Full Bundle (200GB+)} & \textbf{\$34.99}
+            Quantum Computing & \$6.99\\
+            Finance \& Trading & \$6.99\\[0.3cm]
+            \textbf{Full Bundle (200GB+)} & \textbf{\$22.99}
             \end{tabular}
             """, font_size=30)
         pricing.next_to(price, DOWN, buff=MED_LARGE_BUFF)
